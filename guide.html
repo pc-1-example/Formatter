@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Песочница форматов</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем все необходимые библиотеки -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/asciidoctor.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Для Markdown -->
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">Интерактивная песочница</a></h1>
+        </header>
+        <main class="container">
+            <div class="guide-controls">
+                <label for="formatSelector">Выберите формат:</label>
+                <select id="formatSelector"></select>
+                <button id="resetButton">Сбросить до примера</button>
+            </div>
+            <div class="playground-grid card">
+                <div>
+                    <h2>Ваш код</h2>
+                    <textarea id="codeInput" spellcheck="false"></textarea>
+                </div>
+                <div>
+                    <h2>Результат</h2>
+                    <div id="outputContainer"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Экспериментируйте с кодом и смотрите на результат в реальном времени</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
