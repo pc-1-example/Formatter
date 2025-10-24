@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример Mermaid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример Mermaid</h1>
+        <p>Ниже приведен пример простой блок-схемы, созданной с помощью Mermaid.</p>
+
+        <pre class="mermaid">
+            graph TD;
+                A[Начало] --> B{Это ромб?};
+                B -- Да --> C[Отлично!];
+                B -- Нет --> D[Попробуй еще раз];
+                C --> E[Конец];
+                D --> E;
+        </pre>
+        
+        <p><strong>Код для диаграммы:</strong></p>
+        <pre><code>
+graph TD;
+    A[Начало] --> B{Это ромб?};
+    B -- Да --> C[Отлично!];
+    B -- Нет --> D[Попробуй еще раз];
+    C --> E[Конец];
+    D --> E;
+        </code></pre>
+    </div>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
