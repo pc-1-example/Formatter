@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример AsciiDoc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/css/asciidoctor.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/asciidoctor.js/1.5.9/asciidoctor.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример AsciiDoc</h1>
+        <p>Ниже показан синтаксис AsciiDoc и результат его преобразования в HTML.</p>
+        
+        <h2>Пример кода AsciiDoc:</h2>
+        <pre><code>
+= Заголовок документа
+
+Это преамбула.
+
+== Секция 1
+
+* это
+* список
+* элементов
+
+.Пример блока с исходным кодом
+[source,ruby]
+----
+puts "Hello, World!"
+----
+        </code></pre>
+
+        <h2>Результат:</h2>
+        <div id="asciidoc-output"></div>
+    </div>
+    <script>
+        const asciidoctor = Asciidoctor();
+        const adocSource = `= Заголовок документа
+
+Это преамбула.
+
+== Секция 1
+
+* это
+* список
+* элементов
+
+.Пример блока с исходным кодом
+[source,ruby]
+----
+puts "Hello, World!"
+----
+`;
+        const html = asciidoctor.convert(adocSource);
+        document.getElementById('asciidoc-output').innerHTML = html;
+    </script>
+</body>
+</html>
