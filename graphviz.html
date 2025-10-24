@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример Graphviz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@viz-js/viz@3.2.2/lib/viz.js" type="javascript/worker"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@viz-js/viz@3.2.2/lib/viz-standalone.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример Graphviz</h1>
+        <p>Ниже приведен пример простого направленного графа, созданного с помощью Graphviz (язык DOT).</p>
+        <div id="graphviz-container"></div>
+
+        <p><strong>Код (язык DOT) для графа:</strong></p>
+        <pre><code>
+digraph G {
+  rankdir="LR";
+  A -> B;
+  B -> C;
+  C -> A;
+}
+        </code></pre>
+    </div>
+    <script>
+        const dot = `
+        digraph G {
+          rankdir="LR";
+          A -> B;
+          B -> C;
+          C -> A;
+        }
+        `;
+
+        Viz.instance().then(function(viz) {
+          document.getElementById("graphviz-container").appendChild(viz.renderSVGElement(dot));
+        });
+    </script>
+</body>
+</html>
