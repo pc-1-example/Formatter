@@ -2,25 +2,49 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Примеры форматов форматирования</title>
+    <title>Интерактивный гайд по форматам</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Примеры популярных форматов форматирования</h1>
-        <div class="nav">
-            <a href="latex.html">LaTeX</a>
-            <a href="markdown.html">Markdown</a>
-            <a href="mermaid.html">Mermaid</a>
-            <a href="threejs.html">Three.js</a>
-            <a href="d3.html">D3.js</a>
-            <a href="chartjs.html">Chart.js</a>
-            <a href="vegalite.html">Vega-Lite</a>
-            <a href="plantuml.html">PlantUML</a>
-            <a href="graphviz.html">Graphviz</a>
-            <a href="asciidoc.html">AsciiDoc</a>
-        </div>
-        <p>Выберите один из форматов выше, чтобы увидеть минимальный пример его использования.</p>
+    <div class="page-container">
+        <header>
+            <h1>Гайд по форматам</h1>
+        </header>
+        <main class="container">
+            <div class="card">
+                <h2>Добро пожаловать!</h2>
+                <p>Это интерактивный гайд, который поможет вам изучить основы популярных форматов разметки и визуализации. Выберите один из форматов ниже или перейдите в <a href="guide.html">общую песочницу</a>, чтобы начать экспериментировать.</p>
+            </div>
+            <div class="card-grid">
+                <a href="guide.html?format=Markdown" class="card format-card">
+                    <h3>Markdown</h3>
+                    <p>Простой и популярный язык для форматирования текста.</p>
+                </a>
+                <a href="guide.html?format=Mermaid" class="card format-card">
+                    <h3>Mermaid</h3>
+                    <p>Создание диаграмм и блок-схем из текста.</p>
+                </a>
+                <a href="guide.html?format=LaTeX" class="card format-card">
+                    <h3>LaTeX (MathJax)</h3>
+                    <p>Набор макрорасширений для верстки математических формул.</p>
+                </a>
+                 <a href="guide.html?format=PlantUML" class="card format-card">
+                    <h3>PlantUML</h3>
+                    <p>Создание UML-диаграмм из простого текстового описания.</p>
+                </a>
+                <a href="guide.html?format=Vega-Lite" class="card format-card">
+                    <h3>Vega-Lite</h3>
+                    <p>Декларативный язык для создания интерактивных визуализаций.</p>
+                </a>
+                 <a href="guide.html?format=AsciiDoc" class="card format-card">
+                    <h3>AsciiDoc</h3>
+                    <p>Более мощный аналог Markdown для технической документации.</p>
+                </a>
+            </div>
+        </main>
     </div>
+    <footer>
+        <p>Создано для демонстрации и обучения</p>
+    </footer>
 </body>
 </html>
