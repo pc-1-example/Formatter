@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример D3.js</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример D3.js</h1>
+        <p>Ниже приведен пример создания простых SVG-элементов с помощью D3.js.</p>
+        <div id="d3-container"></div>
+
+        <p><strong>Код для создания фигур:</strong></p>
+        <pre><code>
+&lt;script&gt;
+    const data = [
+        { x: 50, y: 50, r: 20, color: "red" },
+        { x: 120, y: 70, r: 30, color: "green" },
+        { x: 220, y: 40, r: 25, color: "blue" }
+    ];
+
+    const svg = d3.select("#d3-container")
+        .append("svg")
+        .attr("width", 300)
+        .attr("height", 150)
+        .style("border", "1px solid black");
+
+    svg.selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", d => d.r)
+        .attr("fill", d => d.color);
+&lt;/script&gt;
+        </code></pre>
+    </div>
+
+    <script>
+        const data = [
+            { x: 50, y: 50, r: 20, color: "red" },
+            { x: 120, y: 70, r: 30, color: "green" },
+            { x: 220, y: 40, r: 25, color: "blue" }
+        ];
+
+        const svg = d3.select("#d3-container")
+            .append("svg")
+            .attr("width", 300)
+            .attr("height", 150)
+            .style("border", "1px solid black");
+
+        svg.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", d => d.r)
+            .attr("fill", d => d.color);
+    </script>
+</body>
+</html>
