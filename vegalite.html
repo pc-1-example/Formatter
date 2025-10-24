@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример Vega-Lite</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример Vega-Lite</h1>
+        <p>Ниже приведен пример диаграммы рассеяния, созданной с помощью Vega-Lite.</p>
+        <div id="vis"></div>
+
+        <p><strong>Код (JSON-спецификация) для диаграммы:</strong></p>
+        <pre><code>
+&lt;script&gt;
+    const spec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart with embedded data.",
+      "data": {
+        "values": [
+          {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+          {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+          {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+        ]
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "a", "type": "ordinal"},
+        "y": {"field": "b", "type": "quantitative"}
+      }
+    };
+    vegaEmbed('#vis', spec);
+&lt;/script&gt;
+        </code></pre>
+    </div>
+    <script>
+        const spec = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "description": "A simple bar chart with embedded data.",
+          "data": {
+            "values": [
+              {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+              {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+              {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+            ]
+          },
+          "mark": "bar",
+          "encoding": {
+            "x": {"field": "a", "type": "ordinal"},
+            "y": {"field": "b", "type": "quantitative"}
+          }
+        };
+        vegaEmbed('#vis', spec);
+    </script>
+</body>
+</html>
