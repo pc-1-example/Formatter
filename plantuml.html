@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример PlantUML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">Главная</a>
+        </div>
+        <h1>Минимальный пример PlantUML</h1>
+        <p>Ниже приведен пример диаграммы последовательности, сгенерированной сервером PlantUML.</p>
+        <img src="http://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IS2mjo_PcuwA2uL82p2jFqE42Xg48Lg4eLg9J2wD5G000" alt="Диаграмма последовательности">
+
+        <p><strong>Код для диаграммы:</strong></p>
+        <pre><code>
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+Alice -> Bob: Another message
+@enduml
+        </code></pre>
+        <p>Изображение генерируется путем кодирования этого текста в URL.</p>
+    </div>
+</body>
+</html>
